@@ -1,0 +1,143 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+/*Animation*/
+@keyframes bounce
+  0%
+    transform: translateY(0)
+  10%
+    transform: translateY(-50%)
+  20%
+    transform: translateY(0)
+  30%
+    transform: translateY(-25%)
+  40%
+    transform: translateY(0)
+  50%
+    transform: translateY(-10%)
+  60%
+    transform: translateY(0)
+  70%
+    transform: translateY(0)
+  80%
+    transform: translateY(0)
+  100%
+    transform: translateY(0)
+
+
+//First screen styles
+.header
+  font-family: $default-font
+  color: $default_font_color
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 11px
+  &__stripe
+    &--options
+      border-bottom: 1px solid $border-color
+  &__link
+    display: inline-block
+    margin: 14px 17px
+    letter-spacing: 1px
+    color: $default_font_color
+    &:hover,
+    &:focus,
+    &active
+      text-decoration: none
+      color: $active-color
+    &:first-child
+      margin-left: 22px
+    &:last-of-type
+      margin-left: 11px
+  &__select
+    border: none
+    position: relative
+    background-color: transparent
+    text-transform: uppercase
+    appearance: none
+    font-weight: bold
+    width: 130%
+    letter-spacing: 1px
+    padding-right: 25px
+    cursor: pointer
+    z-index: 2
+    &:nth-of-type(1)
+      padding-right: 10px
+    &:focus
+      outline: none
+
+.select__wrapper
+  display: inline-block
+  float: right
+  padding-right: 0
+  margin-right: 3px
+  position: relative
+  line-height: 44px
+  letter-spacing: 1px
+  &:hover
+    &:after
+      animation: bounce 1.75s infinite
+
+  &:nth-of-type(1)
+    margin-right: 3px
+    padding-right: 0
+    margin-left: 20px
+  &:nth-of-type(2)
+    margin-right: 0px
+    border-right: 1px solid $border-color
+    padding-right: 27px
+    &:after
+      right: 14px
+
+
+
+  &:after
+    position: absolute
+    top: 15px
+    transition: all 0.3s ease-in
+    right: 0
+    width: 15px
+    height: 15px
+    content: ''
+    display: block
+    background-image: url('img/dd-icon.png')
+    background-repeat: no-repeat
+    z-index: 1
+
+.nav
+  position: relative
+  border-bottom: 1px solid $border-color
+
+  &__logo
+    width: 100px
+    position: relative
+    left: 8px
+    top: 25px
+  &__links
+    font-size: 12px
+    margin-left: 86px
+    padding: 15px 0
+    list-style: none
+    display: flex
+    font-weight: bold
+    text-align: center
+    .list
+      &__item
+        position: relative
+        margin-right: 27px
+        text-align: center
+        &:nth-of-type(5)
+          margin-left: 16px
+        &:hover
+          color: $default_font_color
+        &--active
+          .link
+            &:after
+              content: ''
+              width: 70%
+              display: block
+              height: 2px
+              position: absolute
+              bottom: 5px
+              background-color: $active-color
