@@ -5,4 +5,91 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
+  .footer__cprt
+    margin-top: 0px
+    text-align: center
+  .header__link--search
+    margin-right: -30px
+  .nav__links
+    margin-left: 10px
+
+@media only screen and (max-width : 1025px)
+  .header__link--search
+    margin-right: -20px
+@media only screen and (max-width: 992px)
+  .nav__logo
+    display: block
+    margin: 0 auto
+  .header__bag
+    margin: 20px auto
+  .header__bag:before
+    left: 30%
+  .header__link--search
+    margin: 0
+    top: 15px
+    right: 35%
+@media only screen and (max-width: 768px)
+  .goods__item
+    padding-left: 20%
+    padding-right:  20%
+  .goods__item--new:after
+    left: 47%
+
+@media only screen and (max-width: 724px)
+  .nav__logo
+    margin-bottom: 20px
+  .hamburger-menu
+    display: block
+  .header .nav__links
+    top: 70px
+    left: 0
+    position: fixed
+    z-index: 10
+    background-color: rgba(255, 255, 255, 0.7)
+    padding-right: 10%
+    padding-left: 10%
+    display: none
+    &.active
+      display: flex
+  .nav__links.nav__links--catalog
+    .list__item
+      display: block
+  .section__header
+    margin-bottom:  10px
+  .nav__links .list__item--active .link:after
+    width: 100% !important
+    position: static !important
+  .footer .nav__links
+    flex-direction: column
+  .nav__links
+    flex-direction: column
+  .footer .nav__links, .nav__links
+    margin-left: 0
+  .footer .nav__links .list__item:nth-of-type(n)
+    margin-right: 0
+  .header__stripe--options
+    overflow: hidden
+@media only screen and (max-width: 600px)
+  .header__bag:before
+    left: 10%
+  .nav__links .list__item
+    margin-right: 0
+    margin-left: 0
+  .input
+    margin-left: 0
+  label[for=submit]
+    right: 0
+  .body__section--subscribe
+    overflow: hidden
+  .form
+    width: 300px
+  .section__header--subscribe
+    font-size: 30px
+  .footer__cprt
+    padding-left: 10px
+@media only screen and (max-width: 400px)
+  .header__link:nth-child(n)
+    margin-right: 10px
+    margin-left:  10px
+  .select__wrapper:nth-of-type(n)
+    margin-left: 0px

@@ -33,6 +33,24 @@
   font-weight: bold
   text-transform: uppercase
   font-size: 11px
+  &__bag
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    border: 2px solid $active-color
+    font-weight: bold
+    text-align: center
+    line-height: 48px
+    font-size: 12px
+    margin: 23px 90px
+    &:before
+      content: 'YOUR BAG'
+      text-transform: uppercase
+      display: inline-block
+      width: 100px
+      position: absolute
+      left: 6px
+      letter-spacing: 1px
   &__stripe
     &--options
       border-bottom: 1px solid $border-color
@@ -50,6 +68,12 @@
       margin-left: 22px
     &:last-of-type
       margin-left: 11px
+    &--search
+      margin: 0
+      display: inline-block
+      position: absolute
+      top: 40px
+      right: 4px
   &__select
     border: none
     position: relative
@@ -122,6 +146,22 @@
     display: flex
     font-weight: bold
     text-align: center
+    &.nav__links--catalog
+      text-transform: uppercase
+      margin: 0px
+      padding: 0
+      line-height: 10px
+      display: block
+      margin-left: 12px
+      margin-bottom: 19px
+      .list__item
+        display: inline-block
+        letter-spacing: 0
+        margin: 0px 0px 0px 17px
+        &--active
+          .link:after
+            bottom: 5px
+            width: 50%
     .list
       &__item
         position: relative
@@ -139,5 +179,216 @@
               display: block
               height: 2px
               position: absolute
-              bottom: 5px
+              bottom: 9px
               background-color: $active-color
+.body__section
+  &--catalog
+    padding-top: 42px
+    padding-bottom: 56px
+  &--subscribe
+    padding-top: 30px
+    background-image: url('img/subscribe__bg.jpg')
+    -webkit-background-size: cover
+    background-size: cover
+
+.section
+  &__header
+    text-align: center
+    margin-left: 20px
+    font-size: 58px
+    font-family: 'Playfair Display', serif
+    font-weight: 400
+    &--subscribe
+      color: #fff
+      font-size: 38px
+      margin-top: 10px
+      margin-left: 15px
+      margin-bottom: 22px
+
+.goods
+  &__item
+    margin-top: 16px
+    padding-left: 23px
+    padding-right: 6px
+    &--new
+      &:after
+        content: 'new'
+        color: #fff
+        text-transform: uppercase
+        width: auto
+        font-family: 'Lato', sans-serif
+        font-weight: bold
+        height: auto
+        padding: 4px 9px
+        border-radius: 10px
+        font-size: 12px
+        background-color: $active-color
+        position: absolute
+        top: 25px
+        left: 50px
+
+.item
+  &__name
+    font-size: 16px
+    font-family: 'Playfair Display', sans-serif
+    font-weight: 400
+    text-align: center
+    margin-top: 21px
+    margin-bottom: 5px
+  &__description
+    text-align: center
+    margin-top: 0
+  &__price
+    text-align: center
+    font-family: 'Lato', sans-serif
+    color: $default_font_color
+    display: inline-block
+
+    margin-left: 5px
+    &--inactive
+      text-decoration: line-through
+    &--sale
+      color: #fc411d
+.link
+  &:hover,
+  &:active,
+  &focus
+    text-decoration: none
+  &__load--more
+    text-transform: uppercase
+    color: $default_font_color
+    font-size:  12px
+    font-weight: 700
+    text-align: center
+    display: block
+    font-family: 'Lato', sans-serif
+    margin-top: 34px
+    letter-spacing: 1px
+    margin-left: 14px
+    &:hover
+      color: $active-color
+.form
+  text-align: center
+  margin: 0 auto
+  position: relative
+  width: 320px
+.input
+  border: 2px solid #fff
+  background-color: transparent
+  outline: none
+  border-radius: 30px
+  padding: 15px 20px
+  margin-bottom: 69px
+  margin-top: 0
+  margin-left: 16px
+  color: #fff
+  text-transform: uppercase
+  font-size: 12px
+  font-weight: bold
+  min-width: 300px
+  &::-webkit-input-placeholder
+    color: #fff
+    letter-spacing: 1px
+  &:-moz-placeholder
+    color: #fff
+    letter-spacing: 1px
+  &::-moz-placeholder
+    color: #fff
+    letter-spacing: 1px
+  &:-ms-input-placeholder
+    color: #fff
+    letter-spacing: 1px
+
+.submit
+  background-color: transparent
+  border: none
+  color: #fff
+label[for="submit"]
+  width: 50px
+  height: 50px
+  display: block
+  position: absolute
+  top: -18px
+  right: -10px
+  cursor: pointer
+  &:after
+    content: ''
+    z-index: 2
+    background-image: url('img/submit__icon.png')
+    display: block
+    width: 20px
+    height: 20px
+.footer
+  text-transform: uppercase
+  .nav__links
+    margin-left: 95px
+    .list__item
+      margin-right: 25px
+      &:nth-of-type(n)
+        margin-left: 0
+  &__cprt
+    text-transform: none
+    font-family: 'Lato', sans-serif
+    font-size: 12px
+    font-weight: bold
+    line-height: 1em
+    margin-top: 45px
+    padding-left: 59px
+    letter-spacing: 0.9px
+
+.hamburger-menu
+  position: fixed
+  left: 10px
+  top: 50px
+  margin: auto
+  display: none
+  width: $bar-width
+  height: $bar-height + $bar-spacing*2
+  cursor: pointer
+  z-index: 10
+
+
+.bar,
+.bar:after,
+.bar:before
+  width: $bar-width
+  height: $bar-height
+
+
+.bar
+  position: relative
+  transform: translateY($bar-spacing)
+  background: rgba(0, 0, 0, 1)
+  transition: all 0ms 300ms
+  &.animate
+    background: rgba(255, 255, 255, 0)
+
+
+.bar:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: $bar-spacing
+  background: rgba(0, 0, 0, 1)
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar:after
+  content: ""
+  position: absolute
+  left: 0
+  top: $bar-spacing
+  background: rgba(0, 0, 0, 1)
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar.animate:after
+  top: 0
+  transform: rotate(45deg)
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar.animate:before
+  bottom: 0
+  transform: rotate(-45deg)
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
